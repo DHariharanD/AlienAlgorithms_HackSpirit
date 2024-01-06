@@ -20,10 +20,11 @@ def generate_t5_response(prompt_input):
 
 # Load data from multiple PDFs
 def load_data():
-    pdf_file_paths = [
-        "data/ebooks_academic_geop4e_frontmatter.pdf",
-        "data/Gale-Encyclopedia-of-Psychology-2nd-ed.-2001.pdf"
-    ]
+    # Read the preprocessed data from the preprocessing.py file
+    with open("preprocessed_data.txt", "r") as file:
+        text_data = file.read()
+    return text_data
+
 
     text_data = ""
     for pdf_file_path in pdf_file_paths:
