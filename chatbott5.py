@@ -76,6 +76,6 @@ def process_input(user_input):
 user_input = st.text_input("You:", key="user_input")
 
 # Process input on button click
-if st.button("Snd", key="send_button"):
+if st.button("Send", key="send_button"):
     if user_input.strip() != "":
         process_input(user_input)
